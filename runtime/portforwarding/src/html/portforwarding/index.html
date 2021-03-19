@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>Port Forwarding</title>
+
+    <link rel='stylesheet' href='../botmanager/themes/font.css'>
+    <link rel="stylesheet" href="../botmanager/themes/newbound.min.css" />
+    <link rel="stylesheet" href="../botmanager/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="../botmanager/jquerymobile_1_4_2/jquery.mobile.structure-1.4.2.min.css" />
+    <script src="../botmanager/jquerymobile/jquery-1.9.1.min.js"></script>
+    <script src="../botmanager/jquerymobile_1_4_2/jquery.mobile-1.4.2.min.js"></script>
+    <script src="../botmanager/nav.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="../peerbot/connections.css" />
+    <script src="../peerbot/connections.js"></script>
+
+  </head>
+  <body>
+	<div id='botcontrols' data-role='page'>
+		<div data-role="header">
+			<h1 id="headertitle">Port Forwarding</h1>
+            <a href="../botmanager/index.html" data-role="none" data-ajax="false"><img src="../botmanager/img/menu.png" width="36px"height="36px"></a>
+			<div data-role="navbar" class="ui-body-b">
+				<ul>
+					<li><a onclick="swapControls(0);" id="topnav0" class="topnavitem">Local</a></li>
+					<li><a onclick="swapControls(1);" id="topnav2" class="topnavitem">Remote</a></li>
+				</ul>
+			</div><!-- /navbar -->
+		</div><!-- /header -->
+		<div data-role="content" data-theme="c"> 
+			<div id='controls0' class='controls'>
+              <h3>Local Ports</h3>
+              <div id='locallist'></div>
+              <br><br>
+              <b>Add Port</b><br>
+              <div data-role="fieldcontain">
+                  <label for='localname'>Endpoint Name:</label>
+                  <input type='text' id='localname' value='' placeholder='Give this endpoint a human-readble name'>
+              </div>
+              <div data-role="fieldcontain">
+                  <label for='localaddr'>Local Address:</label>
+                <input type='text' id='localaddr' value='' placeholder='Address to connect to, such as 192.168.1.107 or localhost'>
+              </div>
+              <div data-role="fieldcontain">
+                  <label for='localport'>Port Number:</label>
+                  <input type='text' id='localport' value='' placeholder='Port number'>
+              </div>
+              
+              
+              
+              <input type='button' value='add local port' onclick='addLocal();' data-theme='a'>
+            </div>
+			<div id='controls1' class='controls'>
+              <div id='connections'></div>
+              <h3>Remote Ports</h3>
+              <div id='remotelist'></div>
+            </div>
+      	</div>
+    </div>
+  </body>
+</html>
