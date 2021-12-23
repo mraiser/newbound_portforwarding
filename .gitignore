@@ -1,3 +1,4 @@
 /runtime/portforwarding/botd.properties
 /runtime/portforwarding/remoteports.properties
 /.idea/
+data/portforwarding/version.txt
